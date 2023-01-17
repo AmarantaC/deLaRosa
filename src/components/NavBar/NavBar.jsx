@@ -14,8 +14,12 @@ function NavBar() {
             <i class="fa-solid fa-bars"></i>
           </button>
           <ul class="dropdown-menu">
-            <li> <NavItem to="/"> Playeras </NavItem></li>
-            <li> <NavItem to="/"> Accesorios </NavItem></li>
+            <li className="dropdown-item">
+              <Link className="nav-link" to="/category/Playeras">Playeras</Link>
+            </li>
+            <li className="dropdown-item">
+              <Link className="nav-link" to="/category/Accesorios">Accesorios</Link>
+            </li>
             <li> <NavItem to="/"> Nosotros </NavItem></li>
           </ul>
         </div>

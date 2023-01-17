@@ -2,7 +2,7 @@ const products = [
     {
       id: 1,
       title: "Rosa",
-      category: "Playera",
+      category: "Playeras",
       stock: 7,
       img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
       detail: "M",
@@ -11,7 +11,7 @@ const products = [
     {
       id: 2,
       title: "Amarillo",
-      category: "Playera",
+      category: "Playeras",
       stock: 7,
       img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
       detail: "S",
@@ -20,7 +20,7 @@ const products = [
     {
       id: 3,
       title: "Negro",
-      category: "Playera",
+      category: "Playeras",
       stock: 5,
       img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
       detail: "G",
@@ -29,7 +29,7 @@ const products = [
     {
       id: 4,
       title: "Verde",
-      category: "Playera",
+      category: "Playeras",
       stock: 6,
       img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
       detail: "S",
@@ -38,7 +38,7 @@ const products = [
     {
       id: 5,
       title: "Azul",
-      category: "Playera",
+      category: "Playeras",
       stock: 3,
       img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
       detail: "M",
@@ -47,7 +47,7 @@ const products = [
     {
       id: 6,
       title: "Naranja",
-      category: "Playera",
+      category: "Playeras",
       stock: 10,
       img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
       detail: "G",
@@ -56,7 +56,7 @@ const products = [
     {
       id: 7,
       title: "Morado",
-      category: "Playera",
+      category: "Playeras",
       stock: 2,
       img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
       detail: "G",
@@ -65,7 +65,7 @@ const products = [
     {
       id: 8,
       title: "Blanco",
-      category: "Playera",
+      category: "Playeras",
       stock: 10,
       img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
       detail: "S",
@@ -74,7 +74,7 @@ const products = [
     {
       id: 9,
       title: "Gris",
-      category: "Playera",
+      category: "Playeras",
       stock: 7,
       img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
       detail: "X",
@@ -83,27 +83,27 @@ const products = [
     {
       id: 10,
       title: "Rojo",
-      category: "Playera",
+      category: "Accesorios",
       stock: 10,
-      img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
+      img: "https://tardan.com.mx/wp-content/uploads/2019/10/SOMBRERO-DE-COPA-NEGRO-TRASERO-600x600.jpg",
       detail: "G",
       price: 364.2,
     },
     {
         id: 11,
         title: "Magenta",
-        category: "Playera",
+        category: "Accesorios",
         stock: 7,
-        img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
+        img: "https://tardan.com.mx/wp-content/uploads/2019/10/SOMBRERO-DE-COPA-NEGRO-TRASERO-600x600.jpg",
         detail: "X",
         price: 219.54,
       },
       {
         id: 12,
         title: "Cafe",
-        category: "Playera",
+        category: "Accesorios",
         stock: 10,
-        img: "https://cdn.shopify.com/s/files/1/2687/6776/files/area_de_impresion_playera_480x480.jpg?v=1612304274",
+        img: "https://tardan.com.mx/wp-content/uploads/2019/10/SOMBRERO-DE-COPA-NEGRO-TRASERO-600x600.jpg",
         detail: "G",
         price: 364.2,
       }
@@ -129,7 +129,19 @@ const products = [
       }, 2000);
     });
   };
+
+  const getProductByCategory = (categoryURL) => {
+   
+    return new Promise((resolve) => {
+      let reqItems = products.filter((item) => item.category === categoryURL);
   
+      setTimeout(() => {
+        resolve(reqItems);
+      }, 2000);
+    });
+  };
+  
+
   export default getProducts
 
-  export { getDetail };
+  export { getDetail, getProductByCategory };
